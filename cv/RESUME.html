@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1d2731;
+    padding: 10px 10px ;
+    box-shadow: 0 2px 4px rgba(104, 103, 103, 0.1);}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-decoration-color: #fff;
+    color:#fff
+}
+
+header p {
+    margin: 5px 0;
+    text-decoration-color: #fff;
+    color:#fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #235272;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.job,.skills-item,.Contact-item, .education-item {
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid #235272 ;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s;
+}
+
+.job:hover,.skills-item:hover,.Contact-item:hover, .education-item:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 0;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(226, 211, 211, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.instagram-link {
+    text-decoration: cursive;
+    color: #53535c;
+    padding: 30px 30px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.03s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(253, 251, 251);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+</style>
+    
+<body>
+    <header>
+        <h1>ANGELEENA MARIAM</h1>
+        <p>ASPIRING SOFTWARE ENGINEER| STUDENT</p>
+        <nav>
+            <ul>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job" onclick="toggleModal('job1-modal')">
+            <h3>DATA ANALYST TRAINEE IN SOFTLOOM IT SOLUTIONS (KOCHI)</h3>
+            <p>JULY 2024 - DECEMEBER 2024</p>
+            <p>I developed these skills during a six-month apprenticeship.
+                AWS Services: EC2, S3, Glacier, IAM, EBS, VPC, RDS, EMR, Lambda, SageMaker|
+                Security Configuration: IAM roles, users, and privileges; VPC and subnets; Security Groups|
+                Storage Solutions: S3 Buckets, EBS, Glacier|
+                Networking: VPC, subnets, Direct Connect, VLAN, BGP|
+                Instance Management: Different types of instances (Spot, On-Demand), Auto Scaling|
+                DevOps Tools: CodeStar, CodeCommit, CodeArtifact, CodeBuild, CodeDeploy|
+                Monitoring and Logging: CloudTrail, CloudWatch|
+                Messaging Services: SQS, SNS|
+                Other Services: BeanStack, LightSail|
+                Hadoop Ecosystem: HDFS, MapReduce, Yarn, Pig, Hive, HBase, Sqoop, Flume, Storm, Flink, Airflow|
+                Big Data 2.0 Concepts: Data Lake, Integration Tools, Recommendation Engine, Data Orchestration|</p>
+        </div>
+        
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item" onclick="toggleModal('education1-modal')">
+            <h3>UNITED INDIAN SCHOOL</h3>
+            <p> Completed Higher SecondaryEducation majored in Physics ,Chemistry,Maths with overall 87.4 percentage</p>
+        </div>
+        
+    </section>
+
+ 
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-item" onclick="toggleModal('skills-modal')">
+            <h3>Web Technologies</h3>
+            <p>HTML, CSS, JavaScript, MySQL</p>
+            <p>Git, Linux, Shell Scripts - Version control and scripting expertise.</p>
+            <p>Unit Testing: Skilled in testing and debugging applications.</p>
+            <p>Python (Django)</p>
+            <p>Web Scraping: Experience with Scrapy for extracting data from websites.</p>
+            <p>Data Analysis & Visualization: Proficient with Numpy and Pandas for data manipulation and analysis, and data visualization using histograms, line charts, and bar graphs.</p>
+    
+            <h3>Big Data Technologies</h3>
+            <p>Hadoop Ecosystem: Experience with HDFS, MapReduce, Yarn, Pig, Hive, HBase, Sqoop, Flume.</p>
+            <p>Spark: Expertise in PySpark, Spark-MLib for machine learning, Spark-SQL for querying, and Spark-Streaming for real-time data processing.</p>
+            <p>Big Data 2.0 Tools: Familiar with Data Lake, Integration Tools, Recommendation Engine, and Data Orchestration.</p>
+    
+            <h3>Cloud Computing (AWS)</h3>
+            <p>Infrastructure Management: Knowledge of EC2, IAM, EBS, S3, Glacier, and VPC setup.</p>
+            <p>Security & Identity Management: Proficient in configuring security settings and managing identities and roles.</p>
+            <p>DevOps Tools: Experience with CodeStar, Code Commit, Code Build, Code Deploy.</p>
+            <p>Monitoring & Notifications: Proficient with CloudTrail, CloudWatch, SQS, SNS.</p>
+            <p>Additional Services: Experience with Lambda, SageMaker, RDS, EMR.</p>
+        </div>
+    
+        
+        
+    </section>
+    <section id="Contact">
+        <h2>Contact</h2>
+        <div class="Contact-item" onclick="toggleModal('Contact-modal')">
+            <h3>GMAIL ID : angeleenashaju@gmail.com</h3>
+            <h3>LINKEDIN LINK:<a href="https://www.linkedin.com/in/angeleena-mariam/"  class="instagram-link" >https://www.linkedin.com/in/angeleena-mariam/ </a> </h3>
+            
+        </div>
+        
+    </section>
+    
+   
+
+    
+
+    <footer>
+        <p>&copy; 2024 ANGELEENA </p>
+    </footer>
+
+    <script src="RESUME.JS"></script>
+</body>
+</html>
+</html>
